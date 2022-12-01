@@ -1,0 +1,149 @@
+{defaultcss}
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<div id="ebay-description" class="nojs">
+		<div class="container">
+				<img class="logo" src="https://cdn.shopify.com/s/files/1/0624/1527/4181/files/Element_9LogoBLACK.png?v=1663068944" />
+		</div>
+		<div class="container">
+				<div class="block">
+						<div class="row">
+								<div class="span12">
+										<h2>{Title}</h2>
+								</div>
+						</div>
+						<div class="row">
+								<div class="span12">
+										<!--startcodistodescription - DO NOT REMOVE-->
+										{include field="EbayDescription"}
+										<!--endcodistodescription - DO NOT REMOVE-->
+								</div>
+						</div>
+						<div class="row">
+								<div class="span12 text-center">
+										<a href="#img1">
+										  <img class="logo" src="{CDNUrl}/productimages/{ProductID}.png?width=547&amp;etag={etag}">
+										</a>
+										<a href="#_" class="lightbox" id="img1">
+											<div class="close-img">&times</div>
+											<img src="{CDNUrl}/productimages/{ProductID}.png?width=800&amp;etag={etag}" />
+										</a>
+
+										{for images}
+											<a href="#_" class="lightbox" id="img{position+1}">
+												<div class="close-img">&times</div>
+												<img src="{cdnurl}{images.src}&width=800&amp;height=600&amp;nostretch">
+											</a>
+										{/for}
+
+										<div class="clearfix"></div>
+										{if count(images) > 1}<hr/>{/if}
+										{for images step=4}
+												<div class="row image-row text-center">
+														{for Images count=4 start={position}}
+														<div class="span2"><a class="image fancybox" href="#img{position+1}"><img src="{cdnurl}{images.src}&width=200&amp;height=200"/></a></div>
+														{/for}
+												</div>
+										{/for}
+										<br />
+								</div>
+						</div>
+						<div class="row">
+								<div class="span5 buy-now">
+								{if !MultiVariant}
+										<a href="http://offer.{EbaySiteURL}/ws/eBayISAPI.dll?BinConfirm&amp;quantity=1&amp;fb=1&amp;item={EbayItemID}" target="_blank" class="btn btn-large btn-primary"><i class="icon-shopping-cart icon-white"></i> Jetzt kaufen und sparen!</a>
+								{/if}
+								</div>
+								<div class="span7 buttons">
+										<a href="http://contact.{EbaySiteURL}/ws1/eBayISAPI.dll?ShowEmailAuctionToFriend&amp;rt=nc&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-bullhorn"></i> Teilen</a>
+										{if EbayStoreURL}
+										<a href="{EbayStoreURL}" target="_blank" class="btn btn"><i class="icon-gift"></i> Unseren Shop besuchen</a>
+										{/if}
+										<a href="http://cgi1.{EbaySiteURL}/ws/eBayISAPI.dll?MakeTrack&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-eye-open"></i> Beobachten</a>
+								</div>
+						</div>
+				</div>
+		</div>
+		{if SuggestedProducts}
+				<div class="container">
+					<div class="block" id="you_like">
+						<div class="row">
+							<div class="span12">
+								<h2>Diese Produkte k&ouml;nnten dir auch gefallen</h2>
+							</div>
+						</div>
+						<div class="row">
+							{for SuggestedProducts}
+								<div class="span3">
+									<div class="imagecenter">
+										<a target="_blank" href="http://cgi.{EbaySiteURL}/{EbayItemID}"><img src="{CDNUrl}/productimages/{ID}.jpg?width=170&height=170" /></a>
+									</div>
+									<h4><a target="_blank" href="http://cgi.{EbaySiteURL}/{EbayItemID}">{Name}</a></h4>
+								</div>
+							{/for}
+						</div>
+					</div>
+				</div>
+		{/if}
+		<div class="container">
+		<div class="tabs">
+
+			<div class="tab">
+				<input type="radio" id="tab-1" name="tab-group-1" checked>
+				<label for="tab-1" style="margin-left: 2px;">Kontakt</label>
+
+				<div class="content">
+					<div class="row">
+						 <div class="span6">
+							 <p>Um Kontakt mit uns aufzunehmen, klicken Sie bitte den untenstehenden Knopf. Wir helfen Ihnen gerne!</p>
+							 <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> Kontakt</a></p>
+						 </div>
+						 <div class="span6">
+							 {if MerchantName != "<to be set>"}<p>&copy; {MerchantName}</p>{/if}
+						 </div>
+					</div>
+				</div>
+			</div>
+
+			<div class="tab">
+				<input type="radio" id="tab-2" name="tab-group-1">
+				<label for="tab-2">Versand</label>
+
+				<div class="content">
+					 <p>
+              <p>Alle unsrere Produkte werden aus Deutschland versendet.</p>
+              <p>Der Inlandsversand ist kostenlos, bei &uuml;bergroßen Paketen behalten wir uns vor eine Geb&uuml;hr zu berechnen. Diese wird nat&uuml;rlich vor dem Kauf ausgewiesen.</p>
+              <p>Wir bieten auch international Versand an. Die Kosten hier belaufen sich auf 9,99&euro; - 14,99&euro;</p>
+              <p>Falls Sie noch weitere Fragen zum Versand oder zu Ihrer Sendung im speziellen haben, kontaktieren Sie uns gerne.</p>
+              <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> Kontakt</a></p>
+					 </p>
+				 </div>
+			</div>
+			<div class="tab">
+			  <input type="radio" id="tab-5" name="tab-group-1">
+			  <label for="tab-5">R&uuml;ckgaben</label>
+
+			  <div class="content">
+          <p>R&uuml;ckgaben sind innerhalb von 30 Tagen nach Kauf m&ouml;glich.</p>
+          <p>Die Kosten f&uuml;r den R&uuml;ckversand sind vom K&auml;ufer zu tragen.</p>
+
+          <br />
+						<div>{EbayReturnPolicyDescription}</div>
+			   </div>
+		   </div>
+
+		</div>
+		</div>
+
+		<div class="container" id="footer">
+				<!--
+				The following logo and attribution needs to remain with the appropriate link back to codisto as per our terms of service
+				-->
+				<div class="pull-right logo">
+						<span class="muted"> eBay integration</span> by
+						<img class="baseline" src="{CDNUrl}/images/codisto-connect.png?width=200&amp;nostretch&amp;v=1" />
+				</div>
+				<img class="logo" src="{CDNUrl}/images/logo.png?width=201&nostretch&etag={LogoEtag}" />
+		</div>
+</div>
