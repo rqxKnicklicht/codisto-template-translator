@@ -1,0 +1,5 @@
+eval "$(cat languages/es.env)" && envsubst < template.txt > ebay-ES.liquid
+eval "$(cat languages/de.env)" && envsubst < template.txt > ebay-DE.liquid
+eval "$(cat languages/it.env)" && envsubst < template.txt > ebay-IT.liquid
+eval "$(cat languages/fr.env)" && envsubst < template.txt > ebay-FR.liquid
+eval "$(cat languages/ie.env)" && envsubst < template.txt > ebay-IE.liquid
