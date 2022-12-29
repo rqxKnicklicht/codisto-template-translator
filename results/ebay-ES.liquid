@@ -52,15 +52,15 @@
 						<div class="row">
 								<div class="span5 buy-now">
 								{if !MultiVariant}
-										<a href="http://offer.{EbaySiteURL}/ws/eBayISAPI.dll?BinConfirm&amp;quantity=1&amp;fb=1&amp;item={EbayItemID}" target="_blank" class="btn btn-large btn-primary"><i class="icon-shopping-cart icon-white"></i> </a>
+										<a href="http://offer.{EbaySiteURL}/ws/eBayISAPI.dll?BinConfirm&amp;quantity=1&amp;fb=1&amp;item={EbayItemID}" target="_blank" class="btn btn-large btn-primary"><i class="icon-shopping-cart icon-white"></i> Compre ahora y ahorre</a>
 								{/if}
 								</div>
 								<div class="span7 buttons">
-										<a href="http://contact.{EbaySiteURL}/ws1/eBayISAPI.dll?ShowEmailAuctionToFriend&amp;rt=nc&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-bullhorn"></i> </a>
+										<a href="http://contact.{EbaySiteURL}/ws1/eBayISAPI.dll?ShowEmailAuctionToFriend&amp;rt=nc&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-bullhorn"></i> Compartir</a>
 										{if EbayStoreURL}
-										<a href="{EbayStoreURL}" target="_blank" class="btn btn"><i class="icon-gift"></i> </a>
+										<a href="{EbayStoreURL}" target="_blank" class="btn btn"><i class="icon-gift"></i> Visite nuestra tienda!</a>
 										{/if}
-										<a href="http://cgi1.{EbaySiteURL}/ws/eBayISAPI.dll?MakeTrack&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-eye-open"></i> </a>
+										<a href="http://cgi1.{EbaySiteURL}/ws/eBayISAPI.dll?MakeTrack&amp;item={EbayItemID}" target="_blank" class="btn btn"><i class="icon-eye-open"></i> Observar</a>
 								</div>
 						</div>
 				</div>
@@ -70,7 +70,7 @@
 					<div class="block" id="you_like">
 						<div class="row">
 							<div class="span12">
-								<h2></h2>
+								<h2>Puede que también le gusten estos productos</h2>
 							</div>
 						</div>
 						<div class="row">
@@ -91,13 +91,13 @@
 
 			<div class="tab">
 				<input type="radio" id="tab-1" name="tab-group-1" checked>
-				<label for="tab-1" style="margin-left: 2px;"></label>
+				<label for="tab-1" style="margin-left: 2px;">Contacto</label>
 
 				<div class="content">
 					<div class="row">
 						 <div class="span6">
-							 <p></p>
-							 <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> </a></p>
+							 <p>Para ponerse en contacto con nosotros, haga clic en el bot&oacute;n siguiente. Estaremos encantados de ayudarle!</p>
+							 <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> Contacto</a></p>
 						 </div>
 						 <div class="span6">
 							 {if MerchantName != "<to be set>"}<p>&copy; {MerchantName}</p>{/if}
@@ -108,25 +108,25 @@
 
 			<div class="tab">
 				<input type="radio" id="tab-2" name="tab-group-1">
-				<label for="tab-2"></label>
+				<label for="tab-2">Env&iacute;o</label>
 
 				<div class="content">
 					 <p>
+              <p>Todos nuestros productos se envían desde Alemania.</p>
+              <p>Los env&iacute;os nacionales son gratuitos, pero nos reservamos el derecho de cobrar una tarifa por los paquetes m&aacute;s grandes. Por supuesto, esto se mostrar&aacute; antes de la compra.</p>
+              <p>Tambi&eacute;n ofrecemos env&iacute;os internacionales. Los costes aqu&iacute; son de 9,99&euro; - 14,99&euro;</p>
               <p></p>
-              <p></p>
-              <p></p>
-              <p></p>
-              <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> </a></p>
+              <p><a target="_blank" href="http://contact.{EbaySiteURL}/ws/eBayISAPI.dll?FindAnswers&amp;requested={EbayUserID}&amp;iid={EbayItemID}" class="btn btn-info btn-large"><i class="icon-info-sign icon-white"></i> Contacto</a></p>
 					 </p>
 				 </div>
 			</div>
 			<div class="tab">
 			  <input type="radio" id="tab-5" name="tab-group-1">
-			  <label for="tab-5"></label>
+			  <label for="tab-5">Devuelve</label>
 
 			  <div class="content">
-          <p></p>
-          <p></p>
+          <p>Las devoluciones son posibles dentro de los 30 días posteriores a la compra.</p>
+          <p>Los gastos de devoluci&oacute;n corren a cargo del comprador.</p>
 
           <br />
 						<div>{EbayReturnPolicyDescription}</div>

@@ -1,4 +1,4 @@
-export BASEDIR="/home/kexternbrink/source/codisto-template-translator"
+export BASEDIR="/home/kexternbrink/codisto-template-translator"
 eval "$(cat ${BASEDIR}/languages/de.env)" && envsubst < ${BASEDIR}/template.txt > ${BASEDIR}/results/ebay-DE.liquid
 eval "$(cat ${BASEDIR}/languages/fr.env)" && envsubst < ${BASEDIR}/template.txt > ${BASEDIR}/results/ebay-FR.liquid
 eval "$(cat ${BASEDIR}/languages/it.env)" && envsubst < ${BASEDIR}/template.txt > ${BASEDIR}/results/ebay-IT.liquid
